@@ -17,8 +17,7 @@ export default async function Home() {
     .order('created_at', { ascending: false })
 
   return (
-    <div className="space-y-8 max-w-6xl mx-auto">
-      {/* Hero Banner */}
+    <div className="space-y-8 max-w-6xl mx-auto p-6">
       <div className="rounded-3xl border border-neutral-800 bg-gradient-to-r from-rose-950/40 via-neutral-900 to-neutral-900 p-8 md:p-12">
         <span className="text-xs font-bold uppercase tracking-wider text-rose-500 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">
           Türkani'ye Hoş Geldiniz
@@ -31,14 +30,11 @@ export default async function Home() {
         </p>
       </div>
 
-      {/* Son Eklenen Animeler */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-bold text-white flex items-center gap-2">
-            <Film className="h-5 w-5 text-rose-500" />
-            Son Eklenen Animeler
-          </h2>
-        </div>
+        <h2 className="text-xl font-bold text-white flex items-center gap-2">
+          <Film className="h-5 w-5 text-rose-500" />
+          Son Eklenen Animeler
+        </h2>
 
         {animeList && animeList.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -76,7 +72,7 @@ export default async function Home() {
           </div>
         ) : (
           <div className="text-center py-16 text-neutral-500 text-sm border border-dashed border-neutral-800 rounded-xl">
-            Henüz veritabanında anime bulunmuyor. Admin panelinden ekleyebilirsiniz.
+            Henüz veritabanında anime bulunmuyor.
           </div>
         )}
       </div>
